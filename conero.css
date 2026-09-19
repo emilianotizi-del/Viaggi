@@ -30,7 +30,7 @@
 .k-day h2 em{font-style:italic;color:var(--adriatico)}
 .k-day header p{font-size:18px;max-width:640px;margin:0}
 .k-day header .sole{width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,#ffd166 0 44%,transparent 45%),repeating-conic-gradient(#ffd16655 0 6deg,transparent 6deg 12deg)}
-.sotto{background:var(--grotta);color:#efe6d6}.sotto .k-day h2,.sotto h2{color:#efe6d6}.sotto .k-day h2 em{color:var(--ocra)}
+.sotto{background:var(--grotta);color:#efe6d6}.sotto .k-day h2,.sotto h2{color:#efe6d6}.k-day.sotto h2 em{color:var(--ocra)}
 .sotto .k-kicker,.sotto .k-day header>span,.sotto .k-box>span{color:var(--ocra)}
 .sotto .k-box{background:#2a211a;color:#efe6d6;border-top-color:var(--ocra)}.sotto .k-box h3{color:var(--ocra)}
 .sotto .k-quote{color:var(--ocra)}
