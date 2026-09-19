@@ -1,0 +1,77 @@
+/* napoli.css — identità grafica del diario di Napoli: tufo, golfo, lava, maiolica */
+:root{--tufo:#e2b447;--golfo:#153b5e;--lava:#1c1a19;--calce:#f6f0e2;--pompei:#a83a22;--maiolica:#2c7a5b;--cielo:#8fb8d6;--carta:#efe4cc}
+.napoli{background:var(--calce);color:var(--lava);font-family:Karla,"Segoe UI",sans-serif}
+.napoli-top{background:#f6f0e2ee;border-color:#153b5e33}.napoli-top .brand span{color:var(--pompei)}
+
+/* motivo a riggiole: rombi gialli e verdi come nel chiostro di Santa Chiara */
+.riggiole{background:
+ linear-gradient(45deg,var(--tufo) 25%,transparent 25%) 0 0/28px 28px,
+ linear-gradient(-45deg,var(--tufo) 25%,transparent 25%) 0 0/28px 28px,
+ linear-gradient(45deg,transparent 75%,var(--maiolica) 75%) 0 0/28px 28px,
+ linear-gradient(-45deg,transparent 75%,var(--maiolica) 75%) 0 0/28px 28px,
+ var(--cielo)}
+
+.n-hero{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);min-height:88vh;background:var(--golfo);color:var(--calce);overflow:hidden}
+.n-hero>img{width:100%;height:100%;object-fit:cover;object-position:center 40%;min-height:420px}
+.n-hero-copy{display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(28px,5vw,80px)}
+.n-hero-copy .riggiole{height:14px;width:min(320px,60%);margin-bottom:34px}
+.n-kicker,.n-day header>span,.n-box>span{font:700 12px Karla,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--tufo)}
+.n-hero h1{font:italic 400 clamp(84px,15vw,200px)/.8 "Bodoni Moda",serif;margin:14px 0 8px;letter-spacing:-.03em}
+.n-subtitle{font:400 clamp(22px,3vw,40px) "Bodoni Moda",serif;margin:0 0 22px;color:var(--cielo)}
+.n-hero-copy>p:last-child{max-width:540px;font-size:clamp(16px,1.6vw,20px);line-height:1.6}
+.n-sun{position:absolute;right:-90px;top:-90px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,var(--tufo) 0 38%,transparent 39%),repeating-conic-gradient(var(--tufo) 0 5deg,transparent 5deg 15deg);opacity:.9;pointer-events:none}
+
+.n-intro{max-width:1000px;margin:auto;padding:90px 28px 70px;text-align:center}
+.n-intro>p{font:italic 400 clamp(26px,3.6vw,46px)/1.25 "Bodoni Moda",serif;margin:0 auto 46px;max-width:880px}
+.n-facts{display:flex;justify-content:center;gap:clamp(24px,7vw,90px);flex-wrap:wrap}
+.n-facts div{display:grid}.n-facts strong{font:400 48px "Bodoni Moda",serif;color:var(--pompei)}
+.n-facts span{text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:700}
+
+.n-day{padding:90px max(5vw,20px);position:relative}
+.n-day header{display:grid;grid-template-columns:auto 1fr;gap:clamp(18px,4vw,50px);align-items:end;max-width:1240px;margin:0 auto 50px}
+.n-day header b{font:400 clamp(110px,18vw,240px)/.75 "Bodoni Moda",serif;color:var(--tufo);-webkit-text-stroke:1px var(--golfo);letter-spacing:-.06em}
+.n-day h2{font:400 clamp(38px,5.4vw,72px)/.95 "Bodoni Moda",serif;margin:12px 0 16px;letter-spacing:-.02em}
+.n-day header p{font-size:18px;max-width:640px;margin:0}
+.lava{background:var(--lava);color:var(--calce)}.lava .n-day h2,.lava h2{color:var(--calce)}
+.lava .n-box{background:#26221f;border-color:var(--tufo);color:var(--calce)}.lava .n-box h3{color:var(--tufo)}
+.tufo{background:var(--carta)}
+.n-day.tufo:before{content:"";position:absolute;inset:0 0 auto 0;height:12px;background:repeating-linear-gradient(90deg,var(--golfo) 0 40px,var(--calce) 40px 48px,var(--tufo) 48px 88px,var(--calce) 88px 96px)}
+
+.n-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;max-width:1240px;margin:auto;align-items:stretch}
+.n-grid figure{margin:0;position:relative;overflow:hidden;background:#0d1b28;min-height:380px}
+.n-grid img,.n-grid video{display:block;width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.n-grid video{object-fit:contain;background:#000}
+.n-grid figcaption{position:absolute;left:0;bottom:0;width:100%;padding:34px 20px 16px;background:linear-gradient(transparent,#000c);color:#fff;font:italic 400 17px "Bodoni Moda",serif;letter-spacing:.02em}
+.n-video figcaption{bottom:auto;top:0;padding:16px 20px 34px;background:linear-gradient(#000c,transparent);pointer-events:none}
+.r2{grid-row:span 2}.h-tall{min-height:760px}.h-mid{min-height:560px}
+
+/* targa: il box informativo, come le insegne in maiolica delle strade */
+.n-box{grid-column:span 4;align-self:center;background:#fff;border:3px double var(--golfo);padding:26px 28px;position:relative;box-shadow:6px 6px 0 var(--tufo)}
+.n-box>span{display:block;margin-bottom:8px;color:var(--pompei)}
+.n-box h3{font:400 26px "Bodoni Moda",serif;margin:0 0 10px;color:var(--golfo);line-height:1.1}
+.n-box p{margin:0;font-size:15.5px;line-height:1.6}
+.n-quote{grid-column:span 5;align-self:center;font:italic 400 clamp(26px,3vw,40px)/1.2 "Bodoni Moda",serif;color:var(--pompei);padding:20px 10px;margin:0;border-left:6px solid var(--tufo)}
+.lava .n-quote{color:var(--tufo);border-color:var(--pompei)}
+
+.n-grid>.c4{grid-column:span 4}.n-grid>.c5{grid-column:span 5}.n-grid>.c6{grid-column:span 6}.n-grid>.c7{grid-column:span 7}.n-grid>.c8{grid-column:span 8}.n-grid>.c12{grid-column:1/-1}
+
+.n-interlude{padding:90px 28px;text-align:center;background:var(--golfo);color:var(--calce)}
+.n-interlude p{max-width:860px;margin:auto;font:italic 400 clamp(28px,4.4vw,56px)/1.15 "Bodoni Moda",serif}
+.n-interlude .riggiole{height:12px;max-width:520px;margin:34px auto 0}
+
+.n-end{max-width:1240px;margin:auto;padding:36px max(5vw,20px);display:flex;justify-content:space-between;gap:20px;font:700 12px Karla,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.n-end a{color:var(--pompei);text-decoration:none}
+.n-footer{background:var(--golfo);color:#c9d7e2}
+
+@media(max-width:900px){
+ .n-hero{grid-template-columns:1fr;min-height:0}.n-hero>img{max-height:64vh}.n-sun{width:200px;height:200px;right:-70px;top:-70px}
+ .n-hero h1{font-size:clamp(72px,22vw,130px)}
+ .n-day{padding:70px 16px}.n-day header{grid-template-columns:1fr;gap:6px}.n-day header b{font-size:clamp(90px,26vw,150px)}
+ .n-grid{gap:12px}.n-grid figure{min-height:340px}
+ .n-grid>.c4,.n-grid>.c5,.n-grid>.c6,.n-grid>.c7,.n-grid>.c8{grid-column:span 6}.r2{grid-row:auto}.h-tall{min-height:520px}.h-mid{min-height:460px}
+ .n-grid>.n-box,.n-grid>.n-quote{grid-column:1/-1}
+}
+@media(max-width:560px){
+ .n-grid>.c4,.n-grid>.c5,.n-grid>.c6,.n-grid>.c7,.n-grid>.c8{grid-column:1/-1}.n-grid figure{min-height:440px}.n-grid figure.n-video{min-height:560px}.h-tall{min-height:520px}
+ .n-facts strong{font-size:38px}.n-end span{display:none}
+}
