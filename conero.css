@@ -1,0 +1,76 @@
+/* conero.css — identità grafica del diario di Sirolo e del Conero: calcare, Adriatico, tende a righe, sottosuolo */
+:root{--calcare:#f8f5ee;--adriatico:#1f8fa8;--turchese:#5cc3c9;--notte:#0f2f3f;--macchia:#3f6b4a;--ciottolo:#d9d2c3;--ocra:#c8973f;--grotta:#1a1410;--sabbia:#efe2c8}
+.conero{background:var(--calcare);color:var(--notte);font-family:"Nunito Sans","Segoe UI",sans-serif}
+.conero-top{background:#f8f5eeee;border-color:#1f8fa833}.conero-top .brand span{color:var(--adriatico)}
+
+/* tenda a righe: il motivo degli stabilimenti */
+.tenda{background:repeating-linear-gradient(90deg,var(--adriatico) 0 22px,#fff 22px 44px)}
+.onda{display:block;width:100%;height:60px}
+
+.k-hero{position:relative;min-height:90vh;display:grid;place-items:end start;overflow:hidden;background:var(--notte)}
+.k-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.k-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#0f2f3fee 0,#0f2f3f55 45%,transparent 70%)}
+.k-hero-copy{position:relative;z-index:1;color:#fff;padding:clamp(28px,6vw,90px);max-width:820px}
+.k-hero .tenda{height:16px;width:220px;margin-bottom:26px;border-radius:99px}
+.k-kicker,.k-day header>span,.k-box>span{font:800 12px "Nunito Sans",sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--turchese)}
+.k-hero h1{font:italic 300 clamp(70px,13vw,170px)/.85 Fraunces,serif;margin:14px 0 6px;letter-spacing:-.03em}
+.k-subtitle{font:400 clamp(20px,2.8vw,36px) Fraunces,serif;margin:0 0 20px;color:var(--turchese)}
+.k-hero-copy>p:last-child{max-width:560px;font-size:clamp(16px,1.6vw,20px);line-height:1.6;color:#e6eef1}
+
+.k-intro{max-width:1000px;margin:auto;padding:80px 28px 60px;text-align:center}
+.k-intro>p{font:italic 300 clamp(26px,3.6vw,46px)/1.2 Fraunces,serif;margin:0 auto 40px;max-width:860px}
+.k-facts{display:flex;justify-content:center;gap:clamp(20px,6vw,80px);flex-wrap:wrap}
+.k-facts div{display:grid;place-items:center;width:110px;height:110px;border-radius:52% 48% 55% 45%/50% 55% 45% 50%;background:var(--ciottolo)}
+.k-facts strong{font:400 40px Fraunces,serif;color:var(--notte);line-height:1}
+.k-facts span{text-transform:uppercase;letter-spacing:.12em;font-size:10px;font-weight:800;color:var(--macchia)}
+
+.k-day{padding:80px max(5vw,20px) 100px;position:relative}
+.k-day header{max-width:1240px;margin:0 auto 46px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end}
+.k-day h2{font:300 clamp(40px,6vw,84px)/.95 Fraunces,serif;margin:10px 0 14px;letter-spacing:-.02em}
+.k-day h2 em{font-style:italic;color:var(--adriatico)}
+.k-day header p{font-size:18px;max-width:640px;margin:0}
+.k-day header .sole{width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,#ffd166 0 44%,transparent 45%),repeating-conic-gradient(#ffd16655 0 6deg,transparent 6deg 12deg)}
+.sotto{background:var(--grotta);color:#efe6d6}.sotto .k-day h2,.sotto h2{color:#efe6d6}.sotto .k-day h2 em{color:var(--ocra)}
+.sotto .k-kicker,.sotto .k-day header>span,.sotto .k-box>span{color:var(--ocra)}
+.sotto .k-box{background:#2a211a;color:#efe6d6;border-top-color:var(--ocra)}.sotto .k-box h3{color:var(--ocra)}
+.sotto .k-quote{color:var(--ocra)}
+.sabbia{background:var(--sabbia)}
+
+.k-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;max-width:1240px;margin:auto}
+.k-grid figure{margin:0;position:relative;overflow:hidden;background:#1b3a49;min-height:380px;border-radius:22px}
+.k-grid img,.k-grid video{display:block;width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.k-grid video{object-fit:contain;background:#000}
+.k-grid figcaption{position:absolute;left:14px;bottom:14px;padding:8px 14px;background:#fffffff0;color:var(--notte);border-radius:99px;font:600 13px "Nunito Sans",sans-serif;letter-spacing:.02em;max-width:calc(100% - 28px)}
+.sotto .k-grid figure{background:#0d0a08}.sotto .k-grid figcaption{background:#2a211af0;color:#efe6d6}
+.k-video figcaption{bottom:auto;top:14px;pointer-events:none}
+.k-grid>.c4{grid-column:span 4}.k-grid>.c5{grid-column:span 5}.k-grid>.c6{grid-column:span 6}.k-grid>.c7{grid-column:span 7}.k-grid>.c8{grid-column:span 8}.k-grid>.c12{grid-column:1/-1}
+.r2{grid-row:span 2}.h-tall{min-height:760px}.h-mid{min-height:520px}.h-low{min-height:360px}
+
+/* box informativo: cartello da stabilimento, bordo superiore a righe */
+.k-box{grid-column:span 4;align-self:center;background:#fff;border-radius:18px;padding:24px 26px;border-top:12px solid var(--adriatico);box-shadow:0 10px 30px #0f2f3f14}
+.k-box.riga{border-top:0;position:relative}.k-box.riga:before{content:"";position:absolute;left:0;right:0;top:0;height:12px;border-radius:18px 18px 0 0;background:repeating-linear-gradient(90deg,var(--adriatico) 0 16px,#fff 16px 32px)}
+.k-box>span{display:block;margin-bottom:8px;color:var(--adriatico)}
+.k-box h3{font:400 25px Fraunces,serif;margin:0 0 10px;line-height:1.1}
+.k-box p{margin:0;font-size:15.5px;line-height:1.6}
+.k-quote{grid-column:span 5;align-self:center;font:italic 300 clamp(26px,3vw,40px)/1.2 Fraunces,serif;color:var(--adriatico);padding:16px 8px;margin:0}
+
+.k-interlude{padding:80px 28px;text-align:center;background:var(--notte);color:#fff;position:relative}
+.k-interlude p{max-width:860px;margin:auto;font:italic 300 clamp(28px,4.4vw,56px)/1.15 Fraunces,serif}
+.k-interlude small{display:block;margin-top:22px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;font-size:11px;color:var(--turchese)}
+
+.k-end{max-width:1240px;margin:auto;padding:36px max(5vw,20px);display:flex;justify-content:space-between;gap:20px;font:800 12px "Nunito Sans",sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.k-end a{color:var(--adriatico);text-decoration:none}
+.k-footer{background:var(--notte);color:#b8cad3}
+
+@media(max-width:900px){
+ .k-hero{min-height:80vh}.k-hero h1{font-size:clamp(64px,20vw,120px)}
+ .k-day{padding:64px 16px 80px}.k-day header{grid-template-columns:1fr}.k-day header .sole{width:70px;height:70px;order:-1}
+ .k-grid{gap:12px}.k-grid figure{min-height:340px;border-radius:16px}
+ .k-grid>.c4,.k-grid>.c5,.k-grid>.c6,.k-grid>.c7,.k-grid>.c8{grid-column:span 6}.r2{grid-row:auto}.h-tall{min-height:520px}.h-mid{min-height:440px}
+ .k-grid>.k-box,.k-grid>.k-quote{grid-column:1/-1}
+ .k-facts div{width:92px;height:92px}.k-facts strong{font-size:32px}
+}
+@media(max-width:560px){
+ .k-grid>.c4,.k-grid>.c5,.k-grid>.c6,.k-grid>.c7,.k-grid>.c8{grid-column:1/-1}.k-grid figure{min-height:420px}.k-grid figure.k-video{min-height:560px}.h-tall{min-height:520px}.h-low{min-height:300px}
+ .k-end span{display:none}
+}
