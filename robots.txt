@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# L'esclusione dai risultati è affidata ai meta robots noindex presenti in ogni pagina.
