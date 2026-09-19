@@ -1,0 +1,80 @@
+/* baltici.css — identità grafica del diario dei Paesi Baltici: ambra, pino, mattone, mare grigio, linee Jugendstil, la rotta dei bus */
+:root{--ambra:#d9922b;--ambra2:#f2c26b;--pino:#1f3d2b;--mattone:#8a3b2a;--baltico:#5b7d8c;--lino:#f4f1ea;--lino2:#e9e3d6;--notte:#101820;--ink:#1d2426}
+.baltici{background:var(--lino);color:var(--ink);font-family:"IBM Plex Sans","Segoe UI",sans-serif}
+.baltici-top{background:#f4f1eaee;border-color:#1f3d2b33}.baltici-top .brand span{color:var(--ambra)}
+
+.b-hero{position:relative;min-height:92vh;display:grid;place-items:end start;overflow:hidden;background:var(--notte)}
+.b-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.b-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#101820f2 0,#10182088 45%,#10182022 75%)}
+.b-hero-copy{position:relative;z-index:1;color:#fff;padding:clamp(28px,6vw,90px);max-width:980px}
+.b-kicker,.b-city header>span,.b-box>span{font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.26em;text-transform:uppercase;color:var(--ambra2)}
+.b-hero h1{font:400 clamp(60px,10vw,150px)/.9 "Cormorant Garamond",serif;margin:12px 0 8px;letter-spacing:-.02em}
+.b-hero h1 em{font-style:italic;color:var(--ambra2)}
+.b-subtitle{font:italic 400 clamp(20px,2.6vw,34px) "Cormorant Garamond",serif;margin:0 0 20px;color:#e6dcc8}
+.b-hero-copy>p:last-child{max-width:600px;font-size:clamp(16px,1.5vw,19px);line-height:1.65;color:#e9e6de}
+
+/* la rotta: fermate collegate da una linea, come sul tabellone del bus */
+.b-route{display:flex;flex-wrap:wrap;gap:10px 0;align-items:center;padding:34px max(5vw,20px);background:var(--pino);color:#e6dcc8;font:500 12px "IBM Plex Sans",sans-serif;letter-spacing:.12em;text-transform:uppercase;justify-content:center}
+.b-route span{display:flex;align-items:center;gap:10px}
+.b-route span:before{content:"";width:10px;height:10px;border-radius:50%;background:var(--ambra);box-shadow:0 0 0 3px #1f3d2b,0 0 0 4px var(--ambra)}
+.b-route span:not(:last-child):after{content:"";width:clamp(18px,3vw,54px);height:2px;background:repeating-linear-gradient(90deg,var(--ambra2) 0 6px,transparent 6px 10px);margin:0 8px}
+.b-route small{opacity:.7;font-size:10px;letter-spacing:.08em}
+
+.b-intro{max-width:1000px;margin:auto;padding:90px 28px 60px;text-align:center}
+.b-intro>p{font:italic 400 clamp(26px,3.4vw,46px)/1.25 "Cormorant Garamond",serif;margin:0 auto 42px;max-width:880px}
+.b-facts{display:flex;justify-content:center;gap:clamp(16px,5vw,60px);flex-wrap:wrap}
+.b-facts div{display:grid;text-align:center;padding:14px 20px;border-top:3px solid var(--ambra)}
+.b-facts strong{font:400 42px "Cormorant Garamond",serif;color:var(--pino);line-height:1}
+.b-facts span{text-transform:uppercase;letter-spacing:.14em;font-size:10px;font-weight:600;color:var(--baltico)}
+
+.b-leg{display:flex;align-items:center;justify-content:center;gap:16px;padding:26px 20px;background:var(--lino2);font:500 12px "IBM Plex Sans",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--pino)}
+.b-leg:before,.b-leg:after{content:"";flex:0 1 160px;height:2px;background:repeating-linear-gradient(90deg,var(--ambra) 0 8px,transparent 8px 14px)}
+
+.b-city{padding:90px max(5vw,20px);position:relative}
+.b-city header{max-width:1240px;margin:0 auto 50px;display:grid;grid-template-columns:auto 1fr;gap:clamp(16px,3vw,40px);align-items:start}
+.b-city header .stop{width:64px;height:64px;border-radius:50%;background:var(--ambra);color:var(--notte);display:grid;place-items:center;font:600 22px "IBM Plex Sans",sans-serif;box-shadow:0 0 0 5px var(--lino),0 0 0 7px var(--ambra)}
+.b-city h2{font:400 clamp(40px,5.6vw,80px)/.95 "Cormorant Garamond",serif;margin:6px 0 14px;letter-spacing:-.02em}
+.b-city h2 em{color:var(--mattone)}
+.b-city header p{font-size:18px;max-width:680px;margin:0}
+.b-city.scuro{background:var(--notte);color:#e9e6de}.b-city.scuro h2{color:#fff}.b-city.scuro h2 em{color:var(--ambra2)}
+.b-city.scuro .b-box{background:#1b2630;color:#e9e6de;border-color:var(--ambra)}.b-city.scuro .b-box h3{color:var(--ambra2)}.b-city.scuro .b-quote{color:var(--ambra2)}
+.b-city.scuro .b-grid figcaption{background:#101820ee;color:#fff}.b-city.scuro header .stop{box-shadow:0 0 0 5px var(--notte),0 0 0 7px var(--ambra)}
+.b-city.mattone{background:linear-gradient(180deg,#efe2d8,var(--lino))}
+.b-city.pino{background:linear-gradient(180deg,#e2e8e0,var(--lino))}
+.b-city.mare{background:linear-gradient(180deg,#dfe7ea,var(--lino))}
+
+.b-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;max-width:1240px;margin:auto}
+.b-grid figure{margin:0;position:relative;overflow:hidden;background:#2a3a44;min-height:380px;border-radius:120px 120px 4px 4px / 60px 60px 4px 4px}
+.b-grid figure:nth-child(3n){border-radius:4px}
+.b-grid img,.b-grid video{display:block;width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.b-grid video{object-fit:contain;background:#000}
+.b-grid figcaption{position:absolute;left:0;bottom:0;width:100%;padding:12px 18px;background:#f4f1eaf0;color:var(--ink);font:italic 400 17px "Cormorant Garamond",serif}
+.b-video figcaption{bottom:auto;top:0;pointer-events:none}
+.b-grid>.c4{grid-column:span 4}.b-grid>.c5{grid-column:span 5}.b-grid>.c6{grid-column:span 6}.b-grid>.c7{grid-column:span 7}.b-grid>.c8{grid-column:span 8}.b-grid>.c12{grid-column:1/-1}
+.r2{grid-row:span 2}.h-tall{min-height:700px}.h-mid{min-height:520px}
+
+/* box: etichetta d'ambra, bordo caldo e angolo tagliato */
+.b-box{grid-column:span 4;align-self:center;background:#fff;border:1.5px solid var(--ambra);padding:24px 26px;position:relative;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,0 100%)}
+.b-box:after{content:"";position:absolute;right:0;top:0;width:22px;height:22px;background:var(--ambra)}
+.b-box>span{display:block;margin-bottom:8px;color:var(--mattone)}
+.b-box h3{font:500 26px "Cormorant Garamond",serif;margin:0 0 10px;line-height:1.1;color:var(--pino)}
+.b-box p{margin:0;font-size:15.5px;line-height:1.6}
+.b-quote{grid-column:span 5;align-self:center;font:italic 400 clamp(26px,3vw,40px)/1.2 "Cormorant Garamond",serif;color:var(--mattone);padding:16px 8px;margin:0}
+
+.b-end{max-width:1240px;margin:auto;padding:36px max(5vw,20px);display:flex;justify-content:space-between;gap:20px;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.b-end a{color:var(--mattone);text-decoration:none}
+.b-footer{background:var(--pino);color:#c9d3c8}
+
+@media(max-width:900px){
+ .b-hero{min-height:80vh}.b-hero h1{font-size:clamp(48px,13vw,100px)}
+ .b-route{padding:26px 16px;gap:8px 0}.b-route span:not(:last-child):after{width:14px;margin:0 6px}
+ .b-city{padding:70px 16px}.b-city header{grid-template-columns:1fr}
+ .b-grid{gap:12px}.b-grid figure{min-height:340px}
+ .b-grid>.c4,.b-grid>.c5,.b-grid>.c6,.b-grid>.c7,.b-grid>.c8{grid-column:span 6}.r2{grid-row:auto}.h-tall{min-height:520px}.h-mid{min-height:440px}
+ .b-grid>.b-box,.b-grid>.b-quote{grid-column:1/-1}
+}
+@media(max-width:560px){
+ .b-grid>.c4,.b-grid>.c5,.b-grid>.c6,.b-grid>.c7,.b-grid>.c8{grid-column:1/-1}.b-grid figure{min-height:430px}.b-grid figure.b-video{min-height:560px}.h-tall{min-height:520px}
+ .b-route span{width:50%;justify-content:flex-start}.b-route span:not(:last-child):after{display:none}
+ .b-end span{display:none}
+}
