@@ -1,0 +1,80 @@
+/* ischia.css — identità grafica del diario di Ischia: tufo verde, ceramica cobalto e giallo, castello, tramonti termali */
+:root{--tufo:#4f7c5c;--tufo2:#2f5540;--cobalto:#1d4f9e;--giallo:#f5c542;--calce:#fbf7ef;--sabbia:#f2e8d2;--corallo:#d9603b;--notte:#12213a;--ink:#1e2a2a}
+.ischia{background:var(--calce);color:var(--ink);font-family:Figtree,"Segoe UI",sans-serif}
+.ischia-top{background:#fbf7efee;border-color:#1d4f9e33}.ischia-top .brand span{color:var(--cobalto)}
+
+/* maiolica: scacchiera cobalto/giallo/bianco come le riggiole del porto */
+.maiolica{background:
+ linear-gradient(45deg,var(--cobalto) 25%,transparent 25% 75%,var(--cobalto) 75%) 0 0/24px 24px,
+ linear-gradient(45deg,var(--giallo) 25%,transparent 25% 75%,var(--giallo) 75%) 12px 12px/24px 24px,#fff}
+
+.i-hero{position:relative;min-height:92vh;display:grid;grid-template-columns:1.2fr 1fr;background:var(--tufo2);color:var(--calce);overflow:hidden}
+.i-hero-fig{margin:0;position:relative;overflow:hidden}
+.i-hero-fig img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;min-height:480px}
+.i-hero-copy{display:flex;flex-direction:column;justify-content:center;padding:clamp(28px,5vw,80px);position:relative}
+.i-hero-copy:before{content:"";position:absolute;right:-60px;bottom:-60px;width:260px;height:260px;border-radius:50%;background:var(--giallo);opacity:.9}
+.i-hero-copy>*{position:relative}
+.i-hero .maiolica{height:12px;width:216px;margin-bottom:26px}
+.i-kicker,.i-day header>span,.i-box>span{font:700 12px Figtree,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--giallo)}
+.i-hero h1{font:400 clamp(68px,10vw,150px)/.9 "DM Serif Display",serif;margin:14px 0 8px;letter-spacing:-.02em}
+.i-subtitle{font:italic 400 clamp(20px,2.8vw,36px) "DM Serif Display",serif;margin:0 0 20px;color:var(--giallo)}
+.i-hero-copy>p:last-child{max-width:520px;font-size:clamp(16px,1.5vw,19px);line-height:1.65;color:#e9efe6}
+
+.i-intro{max-width:1000px;margin:auto;padding:90px 28px 60px;text-align:center}
+.i-intro>p{font:italic 400 clamp(26px,3.4vw,44px)/1.25 "DM Serif Display",serif;margin:0 auto 42px;max-width:860px}
+.i-facts{display:flex;justify-content:center;gap:clamp(16px,5vw,60px);flex-wrap:wrap}
+.i-facts div{display:grid;place-items:center;width:112px;height:112px;border-radius:50%;background:#fff;border:4px double var(--cobalto)}
+.i-facts strong{font:400 40px "DM Serif Display",serif;color:var(--cobalto);line-height:1}
+.i-facts span{text-transform:uppercase;letter-spacing:.12em;font-size:10px;font-weight:700;color:var(--tufo)}
+
+.i-day{padding:90px max(5vw,20px);position:relative}
+.i-day header{max-width:1240px;margin:0 auto 50px;display:grid;grid-template-columns:auto 1fr;gap:clamp(16px,3vw,40px);align-items:start}
+.i-day header .piatto{width:74px;height:74px;border-radius:50%;background:var(--cobalto);color:var(--giallo);display:grid;place-items:center;font:400 30px "DM Serif Display",serif;box-shadow:inset 0 0 0 4px #fff,inset 0 0 0 6px var(--cobalto)}
+.i-day h2{font:400 clamp(38px,5.4vw,74px)/.95 "DM Serif Display",serif;margin:8px 0 14px;letter-spacing:-.02em}
+.i-day h2 em{color:var(--corallo)}
+.i-day header p{font-size:18px;max-width:660px;margin:0}.i-day header>span{color:var(--tufo)}.i-day.notte header>span{color:var(--giallo)}
+.verde{background:linear-gradient(180deg,var(--sabbia),var(--calce))}
+.i-day.notte{background:var(--notte);color:#e8edf5}.i-day.notte h2{color:#fff}.i-day.notte h2 em{color:var(--giallo)}
+.i-day.notte .i-box{background:#1b2f4f;color:#e8edf5;border-color:var(--giallo)}.i-day.notte .i-box h3{color:var(--giallo)}.i-day.notte .i-quote{color:var(--giallo)}
+.i-day.notte .i-grid figcaption{background:#12213aee;color:#fff}
+.i-day.mare{background:#fff}
+.i-day.tramonto{background:linear-gradient(180deg,#fbe0c9,#f7c9a8 40%,var(--calce))}
+
+.i-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;max-width:1240px;margin:auto}
+.i-grid figure{margin:0;position:relative;overflow:hidden;background:#2f5540;min-height:380px;border-radius:6px 40px 6px 40px}
+.i-grid figure:nth-child(even){border-radius:40px 6px 40px 6px}
+.i-grid img,.i-grid video{display:block;width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.i-grid video{object-fit:contain;background:#000}
+.i-grid figcaption{position:absolute;left:0;bottom:0;width:100%;padding:12px 18px;background:#fbf7eff0;color:var(--ink);font:italic 400 16px "DM Serif Display",serif}
+.i-video figcaption{bottom:auto;top:0;pointer-events:none}
+.i-grid>.c4{grid-column:span 4}.i-grid>.c5{grid-column:span 5}.i-grid>.c6{grid-column:span 6}.i-grid>.c7{grid-column:span 7}.i-grid>.c8{grid-column:span 8}.i-grid>.c12{grid-column:1/-1}
+.r2{grid-row:span 2}.h-tall{min-height:760px}.h-mid{min-height:540px}
+
+/* box: piatto in ceramica, bordo cobalto e riga gialla */
+.i-box{grid-column:span 4;align-self:center;background:#fff;border:2px solid var(--cobalto);border-radius:22px;padding:24px 26px;position:relative;box-shadow:0 0 0 6px #fff,0 0 0 7px #1d4f9e33}
+.i-box:before{content:"";position:absolute;left:26px;right:26px;top:0;height:5px;background:var(--giallo);border-radius:0 0 6px 6px}
+.i-box>span{display:block;margin:8px 0;color:var(--corallo)}
+.i-box h3{font:400 25px "DM Serif Display",serif;margin:0 0 10px;line-height:1.1;color:var(--cobalto)}
+.i-box p{margin:0;font-size:15.5px;line-height:1.6}
+.i-quote{grid-column:span 5;align-self:center;font:italic 400 clamp(26px,3vw,40px)/1.2 "DM Serif Display",serif;color:var(--corallo);padding:16px 8px;margin:0}
+
+.i-interlude{padding:90px 28px;text-align:center;background:var(--tufo);color:#fff}
+.i-interlude p{max-width:860px;margin:auto;font:italic 400 clamp(28px,4.4vw,56px)/1.15 "DM Serif Display",serif}
+.i-interlude .maiolica{height:12px;max-width:432px;margin:32px auto 0}
+
+.i-end{max-width:1240px;margin:auto;padding:36px max(5vw,20px);display:flex;justify-content:space-between;gap:20px;font:700 12px Figtree,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.i-end a{color:var(--cobalto);text-decoration:none}
+.i-footer{background:var(--tufo2);color:#c8d8cc}
+
+@media(max-width:900px){
+ .i-hero{grid-template-columns:1fr;min-height:0}.i-hero-fig img{max-height:62vh;min-height:0}.i-hero h1{font-size:clamp(56px,15vw,100px)}.i-hero-copy:before{width:160px;height:160px;right:-50px;bottom:-50px}
+ .i-day{padding:70px 16px}.i-day header{grid-template-columns:1fr}
+ .i-grid{gap:12px}.i-grid figure{min-height:340px}
+ .i-grid>.c4,.i-grid>.c5,.i-grid>.c6,.i-grid>.c7,.i-grid>.c8{grid-column:span 6}.r2{grid-row:auto}.h-tall{min-height:520px}.h-mid{min-height:440px}
+ .i-grid>.i-box,.i-grid>.i-quote{grid-column:1/-1}
+ .i-facts div{width:92px;height:92px}.i-facts strong{font-size:32px}
+}
+@media(max-width:560px){
+ .i-grid>.c4,.i-grid>.c5,.i-grid>.c6,.i-grid>.c7,.i-grid>.c8{grid-column:1/-1}.i-grid figure{min-height:430px}.i-grid figure.i-video{min-height:560px}.h-tall{min-height:520px}
+ .i-end span{display:none}
+}
