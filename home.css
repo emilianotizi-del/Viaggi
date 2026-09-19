@@ -1,0 +1,59 @@
+/* home.css — home e archivio: mosaico fotografico dei viaggi, un colore per ogni diario */
+:root{--c-milano:#8b1e2d;--c-venezia:#c8a764;--c-napoli:#e2b447;--c-conero:#1f8fa8;--c-sicilia:#b6302c;--c-carloforte:#2f6b5a;--c-ischia:#1d4f9e;--c-baltici:#d9922b;--c-portogallo:#1f4e8c}
+
+/* HOME — mosaico in apertura */
+.h-hero{position:relative;display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:repeat(2,minmax(220px,38vh));gap:6px;padding:6px;background:var(--ink)}
+.h-hero figure{margin:0;position:relative;overflow:hidden;border-radius:6px}
+.h-hero figure:first-child{grid-row:span 2}
+.h-hero img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s}
+.h-hero figure:hover img{transform:scale(1.04)}
+.h-hero figcaption{position:absolute;left:12px;bottom:10px;font:700 11px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#fff;padding:7px 10px;border-radius:99px;background:#0008;backdrop-filter:blur(4px)}
+.h-hero-copy{position:absolute;inset:auto 0 0 0;padding:clamp(24px,5vw,64px);background:linear-gradient(0deg,#18332cf2,#18332c99 60%,transparent);color:#fff;pointer-events:none}
+.h-hero-copy>*{pointer-events:auto}
+.h-hero-copy .eyebrow{color:var(--gold)}
+.h-hero-copy h1{font-family:Georgia,serif;font-size:clamp(40px,7vw,92px);line-height:.95;margin:6px 0 10px;max-width:900px}
+.h-hero-copy p:last-child{max-width:620px;font-size:clamp(16px,1.6vw,20px);margin:0}
+
+/* HOME — tre modi di partire, con striscia di foto */
+.h-ways{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.h-way{display:flex;flex-direction:column;border-radius:22px;overflow:hidden;background:var(--white);box-shadow:0 12px 40px rgba(24,51,44,.08);text-decoration:none;color:inherit;transition:transform .25s}
+.h-way:hover{transform:translateY(-4px)}
+.h-way .strip{display:grid;grid-template-columns:repeat(3,1fr);height:150px;overflow:hidden}
+.h-way .strip img{width:100%;height:150px;object-fit:cover;display:block}
+.h-way .strip.one{grid-template-columns:1fr}
+.h-way .body{padding:24px 26px 28px;border-top:6px solid var(--accent,var(--red))}
+.h-way .num{color:var(--accent,var(--red));font-weight:800;font-size:13px;letter-spacing:.12em}
+.h-way h3{font-size:28px;margin:8px 0 6px}
+.h-way p{margin:0;color:#53635e}
+
+/* ARCHIVIO — griglia di copertine */
+.trip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.trip-card{position:relative;display:block;border-radius:22px;overflow:hidden;min-height:380px;text-decoration:none;color:#fff;background:var(--ink);box-shadow:0 12px 40px rgba(24,51,44,.12)}
+.trip-card.wide{grid-column:span 2}
+.trip-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.trip-card:hover img{transform:scale(1.05)}
+.trip-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#0009 0,#0003 45%,transparent 70%)}
+.trip-card .band{position:absolute;left:0;top:0;bottom:0;width:10px;background:var(--accent);z-index:2}
+.trip-card .when{position:absolute;top:18px;right:18px;z-index:2;font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:8px 12px;border-radius:99px;background:var(--accent);color:#fff}
+.trip-card .txt{position:absolute;left:28px;right:20px;bottom:22px;z-index:2}
+.trip-card h3{font-family:Georgia,serif;font-size:clamp(28px,3vw,40px);margin:0 0 6px;line-height:1;text-shadow:0 2px 12px #0008}
+.trip-card p{margin:0;font-size:15px;color:#f1ede4;text-shadow:0 1px 8px #0008}
+.trip-card .tag{position:absolute;left:28px;top:18px;z-index:2;background:#fff;color:var(--ink)}
+.trip-card.soon{filter:saturate(.4)}.trip-card.soon .tag{background:#f2d5a3}
+
+/* HOME — ultimo viaggio */
+.h-last{display:grid;grid-template-columns:1.1fr 1fr;border-radius:22px;overflow:hidden;background:var(--white);box-shadow:0 12px 40px rgba(24,51,44,.08)}
+.h-last img{width:100%;height:100%;min-height:320px;object-fit:cover;display:block}
+.h-last div{padding:34px}
+.h-last h3{font-size:30px;margin:0 0 10px}
+
+@media(max-width:900px){
+ .h-hero{grid-template-columns:1fr 1fr;grid-template-rows:38vh 24vh 24vh}.h-hero figure:first-child{grid-column:span 2;grid-row:auto}
+ .h-ways,.trip-grid{grid-template-columns:1fr 1fr}.trip-card.wide{grid-column:span 2}
+ .h-last{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+ .h-hero{grid-template-columns:1fr 1fr;grid-template-rows:42vh 22vh 22vh}.h-hero-copy h1{font-size:40px}
+ .h-ways,.trip-grid{grid-template-columns:1fr}.trip-card.wide{grid-column:auto}.trip-card{min-height:320px}
+ .h-way .strip{height:120px}.h-way .strip img{height:120px}
+}
