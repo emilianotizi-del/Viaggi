@@ -1,0 +1,77 @@
+/* carloforte.css — identità grafica del diario di Carloforte: facciate liguri pastello, persiane verdi, sale, alba sul mare */
+:root{--rosa:#e9b7a5;--giallo:#f3d58a;--acqua:#bfe0dc;--persiana:#2f6b5a;--mare:#1d6f8f;--profondo:#123647;--sale:#fbf8f1;--sabbia:#efe6d3;--tonno:#b43a3a;--inchiostro:#22303a}
+.carloforte{background:var(--sale);color:var(--inchiostro);font-family:Lora,Georgia,serif}
+.carloforte-top{background:#fbf8f1ee;border-color:#2f6b5a33}.carloforte-top .brand span{color:var(--tonno)}
+
+/* facciate: fascia di colori pastello come le case del porto */
+.facciate{display:grid;grid-template-columns:repeat(6,1fr);height:14px}
+.facciate i{display:block}.facciate i:nth-child(1){background:var(--rosa)}.facciate i:nth-child(2){background:var(--giallo)}.facciate i:nth-child(3){background:var(--acqua)}.facciate i:nth-child(4){background:#f0c7b0}.facciate i:nth-child(5){background:#cfe3a8}.facciate i:nth-child(6){background:#f7e1a0}
+/* persiana: righe orizzontali verdi */
+.persiana{background:repeating-linear-gradient(180deg,var(--persiana) 0 6px,transparent 6px 12px)}
+
+.c-hero{position:relative;min-height:92vh;display:grid;place-items:end start;overflow:hidden;background:linear-gradient(180deg,#f9c98f,#f4a973 45%,#5a8ea3)}
+.c-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%}
+.c-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#123647e6 0,#12364766 40%,transparent 65%)}
+.c-hero-copy{position:relative;z-index:1;color:#fff;padding:clamp(28px,6vw,90px);max-width:860px}
+.c-hero .facciate{width:240px;margin-bottom:26px;border-radius:4px;overflow:hidden}
+.c-kicker,.c-part header>span,.c-box>span{font:600 12px "Josefin Sans",sans-serif;letter-spacing:.28em;text-transform:uppercase;color:var(--giallo)}
+.c-hero h1{font:400 clamp(60px,11vw,150px)/.9 "Josefin Sans",sans-serif;text-transform:uppercase;letter-spacing:.06em;margin:14px 0 6px}
+.c-subtitle{font:italic 400 clamp(20px,2.8vw,36px) Lora,serif;margin:0 0 20px;color:var(--giallo)}
+.c-hero-copy>p:last-child{max-width:560px;font-size:clamp(16px,1.6vw,20px);line-height:1.65;color:#f3efe6}
+
+.c-intro{max-width:1000px;margin:auto;padding:80px 28px 60px;text-align:center}
+.c-intro>p{font:italic 400 clamp(26px,3.4vw,44px)/1.25 Lora,serif;margin:0 auto 40px;max-width:860px}
+.c-facts{display:flex;justify-content:center;gap:clamp(20px,6vw,80px);flex-wrap:wrap}
+.c-facts div{display:grid;text-align:center;padding:14px 18px;border:1px solid var(--persiana);border-radius:4px;background:#fff}
+.c-facts strong{font:400 40px "Josefin Sans",sans-serif;color:var(--tonno);line-height:1}
+.c-facts span{text-transform:uppercase;letter-spacing:.14em;font-size:10px;font-family:"Josefin Sans",sans-serif;font-weight:600;color:var(--persiana)}
+
+.c-part{padding:80px max(5vw,20px) 100px;position:relative}
+.c-part header{max-width:1240px;margin:0 auto 46px;display:grid;grid-template-columns:1fr;gap:6px}
+.c-part h2{font:400 clamp(34px,5vw,64px)/1 "Josefin Sans",sans-serif;text-transform:uppercase;letter-spacing:.06em;margin:6px 0 14px}
+.c-part h2 em{font:italic 400 .8em Lora,serif;text-transform:none;letter-spacing:0;color:var(--mare)}
+.c-part header p{font-size:18px;max-width:660px;margin:0}
+.c-part header .persiana{width:90px;height:36px;margin-bottom:10px}.c-part header>span{color:var(--persiana)}
+.alba{background:linear-gradient(180deg,#fbe3c4,var(--sale))}
+.paese{background:var(--sabbia)}
+.notte{background:var(--profondo);color:#eef3f5}.notte h2{color:#fff}.notte h2 em{color:var(--giallo)}
+.notte .c-part header>span,.notte .c-box>span{color:var(--giallo)}.notte .c-box{background:#1b4a5e;color:#eef3f5;border-color:var(--giallo)}.notte .c-box h3{color:var(--giallo)}
+.notte .c-quote{color:var(--giallo)}.notte .c-grid figcaption{background:#123647ee;color:#fff}.notte .persiana{background:repeating-linear-gradient(180deg,var(--giallo) 0 6px,transparent 6px 12px)}
+.casa{background:#fff}
+
+.c-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;max-width:1240px;margin:auto}
+.c-grid figure{margin:0;position:relative;overflow:hidden;background:#23414f;min-height:380px;border:6px solid #fff;box-shadow:0 1px 0 #0002,0 10px 30px #12364718}
+.c-grid img,.c-grid video{display:block;width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.c-grid video{object-fit:contain;background:#000}
+.c-grid figcaption{position:absolute;left:0;bottom:0;width:100%;padding:12px 16px;background:#fffffff2;color:var(--inchiostro);font:600 11px "Josefin Sans",sans-serif;letter-spacing:.16em;text-transform:uppercase}
+.c-video figcaption{bottom:auto;top:0;pointer-events:none}
+.c-grid>.c4{grid-column:span 4}.c-grid>.c5{grid-column:span 5}.c-grid>.c6{grid-column:span 6}.c-grid>.c7{grid-column:span 7}.c-grid>.c8{grid-column:span 8}.c-grid>.c12{grid-column:1/-1}
+.r2{grid-row:span 2}.h-tall{min-height:760px}.h-mid{min-height:540px}
+
+/* box: cartolina, bordo a persiana sul lato sinistro */
+.c-box{grid-column:span 4;align-self:center;background:#fff;padding:24px 26px 24px 30px;border:1px solid #2f6b5a55;border-left:10px solid var(--persiana);position:relative}
+.c-box:after{content:"";position:absolute;right:14px;top:14px;width:34px;height:42px;border:1px dashed #2f6b5a66;background:repeating-linear-gradient(45deg,var(--rosa) 0 4px,var(--giallo) 4px 8px,var(--acqua) 8px 12px);opacity:.8}
+.c-box>span{display:block;margin-bottom:8px;color:var(--tonno)}
+.c-box h3{font:600 20px "Josefin Sans",sans-serif;letter-spacing:.04em;margin:0 0 10px;line-height:1.15;color:var(--profondo);padding-right:50px}
+.c-box p{margin:0;font-size:15.5px;line-height:1.65}
+.c-quote{grid-column:span 5;align-self:center;font:italic 400 clamp(24px,2.8vw,38px)/1.25 Lora,serif;color:var(--mare);padding:16px 8px;margin:0}
+
+.c-interlude{padding:80px 28px;text-align:center;background:var(--mare);color:#fff}
+.c-interlude p{max-width:860px;margin:auto;font:italic 400 clamp(26px,4vw,52px)/1.2 Lora,serif}
+.c-interlude .facciate{max-width:360px;margin:30px auto 0;border-radius:4px;overflow:hidden}
+
+.c-end{max-width:1240px;margin:auto;padding:36px max(5vw,20px);display:flex;justify-content:space-between;gap:20px;font:600 11px "Josefin Sans",sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.c-end a{color:var(--tonno);text-decoration:none}
+.c-footer{background:var(--profondo);color:#b9cad2}
+
+@media(max-width:900px){
+ .c-hero{min-height:80vh}.c-hero h1{font-size:clamp(48px,14vw,100px)}
+ .c-part{padding:64px 16px 80px}
+ .c-grid{gap:12px}.c-grid figure{min-height:340px;border-width:4px}
+ .c-grid>.c4,.c-grid>.c5,.c-grid>.c6,.c-grid>.c7,.c-grid>.c8{grid-column:span 6}.r2{grid-row:auto}.h-tall{min-height:520px}.h-mid{min-height:440px}
+ .c-grid>.c-box,.c-grid>.c-quote{grid-column:1/-1}
+}
+@media(max-width:560px){
+ .c-grid>.c4,.c-grid>.c5,.c-grid>.c6,.c-grid>.c7,.c-grid>.c8{grid-column:1/-1}.c-grid figure{min-height:430px}.c-grid figure.c-video{min-height:560px}.h-tall{min-height:520px}
+ .c-facts strong{font-size:32px}.c-end span{display:none}
+}
