@@ -20,7 +20,7 @@
 .h-way:hover{transform:translateY(-4px)}
 .h-way .strip{display:grid;grid-template-columns:repeat(3,1fr);height:150px;overflow:hidden}
 .h-way .strip img{width:100%;height:150px;object-fit:cover;display:block}
-.h-way .strip.one{grid-template-columns:1fr}
+.h-way .strip.one{grid-template-columns:1fr}.h-way .strip.roma{display:block}.h-way .strip.roma svg{width:100%;height:100%;display:block}
 .h-way .body{padding:24px 26px 28px;border-top:6px solid var(--accent,var(--red))}
 .h-way .num{color:var(--accent,var(--red));font-weight:800;font-size:13px;letter-spacing:.12em}
 .h-way h3{font-size:28px;margin:8px 0 6px}
